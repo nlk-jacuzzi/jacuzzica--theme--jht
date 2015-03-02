@@ -21,7 +21,13 @@
 										$o .= '<li>';
 									}
 									$o .= '<a href="'. $c['url'] .'">'. $c['name'] .'</a>';
-									$o .= '<div class="superMenu">';
+									
+									if($c['name'] == 'Collections'){
+										$o .= '<div class="superMenu collection-super">';	
+									}
+									else {
+										$o .= '<div class="superMenu">';
+									}
 									
 									if ( isset($c['subcats']) == false ) {
 										if ( $c['name'] == 'Best Selling' ) { // make Best Selling like COLLECTIONS :)
@@ -53,16 +59,32 @@
 											$o .= '<div class="image prel" title="'. $c['img'] .'"></div>';
 										}
 									} else {
-										$o .= '<ul class="grid4 collections">';
+										$cname = $c['name'];
+										if($c['name'] == 'Collections'){
+											$o .= '<ul class="grid4 grid2 collections collections-new">';	
+										}
+										else {
+											$o .= '<ul class="grid4 collections">';
+										}
 										$j = 0;
 										foreach ( $c['subcats'] as $k => $s ) {
 											$o .= '<li class="cell '. $s['slug'] .($j==0 ? ' first' : ($j==3 ? ' last' : '') ) .'">';
 											$o .= '<div class="h">'. $s['fullname'] .'</div>';
 											$o .= '<p class="thumb"><a href="'. $s['url'] .'" title="'. $s['imgsrc'] .'" class="prel thm"></a></p>';
-											$o .= '<p class="tag">'. $s['tag'] .'</p>';
+											if($cname == 'Collections')
+											{
+												$o .= '<p class="tag"><a href="'. $s['url'] .'">'. $s['tag'] .'</a></p>';
+											}
+											else {
+												$o .= '<p class="tag">'. $s['tag'] .'</p>';
+											}
 											$o .= '<p class="link"><a href="'. $s['url'] .'">View '. $s['name'] .'</a></p>';
+											if($cname  == 'Collections'){
+												$o .= '<p class="clear"></p><hr/>';	
+											}
 											$j++;
 										}
+										
 										$o .= '</ul>';
 									}
 									$o .= '</div>';
