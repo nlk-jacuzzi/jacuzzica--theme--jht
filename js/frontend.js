@@ -687,7 +687,10 @@ jQuery(function($) {
 	    states = $("select.state").clone();
 	}
 
-	$('input, textarea').placeholder(); // placeholder replacement text fix for old IE
+	if ( $.isFunction($.fn.placeholder) ) {
+    	$('input, textarea').placeholder(); // placeholder replacement text fix for old IE
+	}
+	//$('input, textarea').placeholder(); // placeholder replacement text fix for old IE
 });
 
 // Owners Corner stuff
