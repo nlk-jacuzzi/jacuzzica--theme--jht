@@ -37,6 +37,8 @@
 	$BETAHOST = array( 'beta.jacuzzihottubs.com' );
 	$DEVHOST = array( 'jht.ninthlink.me' );
 	$LOCALHOST = array( 'local.jht' );
+
+	date_default_timezone_set('America/Los_Angeles');
 	
 	/* - - - - - Site Specific Functions - - - - - */
 		function jht_avala_chunk_hidden() {
