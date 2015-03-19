@@ -16,6 +16,188 @@ get_header( 'newdirect' );
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
 ?>
+<style type="text/css">
+		/* Template related gform css */
+		.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type="submit"] {
+		    border-radius: 5px;
+		    font-size: 1.5em !important;
+		    margin-bottom: 0 !important;
+		    margin-left: 24px;
+		    padding: 0.63125em 1.3em 0.531em;
+			-webkit-box-shadow: 0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+			-moz-box-shadow:    0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+			box-shadow:         0px 5px 10px 0px rgba(136, 133, 142, 0.75);
+		}
+		
+		.gform_wrapper {
+    		margin: 0;
+		}
+		
+		.gform_body
+		{
+			xmargin-left: 24px;
+			width: 545px;
+		}	
+		
+		.gform_wrapper .gform_footer {
+		    clear: both;
+		    margin: 10px 0 0;
+		    padding: 10px 0;
+		}
+		
+		.gform_wrapper .gform_footer {
+		    clear: both;
+		    margin: 16px 0 0;
+		    padding: 16px 0 8px !important;
+		}
+		
+		.gform_wrapper ul li.gfield {
+		    margin-bottom: 7px !important;
+		}
+		
+		.gform_wrapper {
+		    xmargin: 10px 0;
+		    xmax-width: 72% !important;
+		    xoverflow: inherit;
+		    xposition: relative;
+			xmax-width: 572px !important;
+			xmargin-top: 20px !important;
+		}
+		
+		.gform_wrapper .gform_footer {
+		    clear: both;
+		    margin: 16px 0 0;
+		    padding: 16px 0 10px;
+		    position: absolute;
+			right: -299px;
+			top: 6px;
+		}
+		
+		
+		.gform_wrapper input[type="text"], .gform_wrapper input[type="url"], .gform_wrapper input[type="email"], .gform_wrapper input[type="tel"], .gform_wrapper input[type="number"], .gform_wrapper input[type="password"]
+		{
+				border-radius: 5px  !important;
+			    font-family: inherit;
+			    font-size: 12px  !important;
+			    color: #666;	
+		}
+		
+		.gform_wrapper .top_label .gfield_label {
+		    clear: both;
+		    display: inline-block;
+		    font-weight: bold;
+		    line-height: 1.3em;
+		    margin: 10px 0 4px;
+		    xmin-height: 35px;
+		}
+		
+		.gform_wrapper .top_label .gf_right_half .gfield_label, .gform_wrapper .top_label .gf_left_third .gfield_label,  .gform_wrapper .top_label .gf_middle_third .gfield_label
+		{
+			min-height: 30px;
+			margin-top: 0px;
+		}
+		
+		span.requiredSpan
+		{
+			display: block;
+			margin: 10px 0px;
+			text-align: center;
+			font-style: italic;
+			color: #414141;
+			font-size: 12px;
+			line-height: 12px;	
+		}
+		
+		.gplaceholder label
+		{
+			display: none !important;
+		}
+		
+		.gform_wrapper .ginput_complex input[type="text"] {
+		    width: 268px;
+		    height: 28px;
+		    margin: 0px 0px 8px;
+		    display: block;
+		    box-sizing: border-box;
+		}
+		
+		.gform_wrapper .top_label .gfield_label 
+		{
+			width: 180px;
+			color: #000;
+			font: 700 12px/14.5px arial;
+			max-width: 180px;
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
+		}
+		
+		.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label
+		{
+			color: #000;
+			font: 700 12px/14.5px arial;
+			margin-top: 3px !important;
+		}	
+		
+		.checkbox-field .gfield_label
+		{
+			display: none !important;	
+		}	
+		
+		.gform_wrapper .top_label li.gfield.gf_left_third select.medium, .gform_wrapper .top_label li.gfield.gf_middle_third select.medium, .gform_wrapper .top_label li.gfield.gf_right_third select.medium, .gform_wrapper .top_label li select.medium
+		{
+		    border: 1px solid #CCC;
+		    border-radius: 2px;
+		    position: relative;
+		    top: 2px;
+		    height: 25px;
+		    line-height: 25px;
+		    background: none repeat scroll 0% 0% #FFF;
+		    font-size: 12px;
+		    margin-bottom: 0px;
+		}
+		
+		body .gform_wrapper label.gfield_label + div.ginput_container {
+		    margin-top: 0px !important;
+		}
+		
+		#land #page-header .content.ab-b form.bro {
+		    top: 525px;
+		    left: 156px;
+		}
+		
+		.gform_wrapper div.validation_error, .gform_wrapper .ginput_container + .gfield_description.validation_message
+		{
+			display: none  !important;
+		}
+		
+		.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning
+		{
+			background-color: none !important;
+			margin-bottom: 6px !important;
+			padding: 0px !important;
+			border-top: 0px !important;
+			border-bottom: 0px !important;
+		}	
+		
+		.gform_wrapper li.gfield.gfield_error.gfield_contains_required
+		{
+			padding: 0px !important;
+		}
+		
+		li.email-right
+		{
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			left: 562px;
+		}				
+	</style>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('.gform_footer').append('<p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
+		});
+	</script>
+	
 <div id="main-wrapper">
 	<div class="page-header" id="page-header">
     	<div class="content center ab-b">
@@ -23,6 +205,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	<h1><strong class="small">The Jacuzzi Hot Tub Brochure </strong>40 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
                 <h2>Get instant access to hot tub comparison charts, stunning photos,<br />complete specifications and feature descriptions.</h2>
             </div>
+            <?php /* ?>
             <form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="pform bro">
 
                 <?php avala_hidden_fields( 15, 9, 12 ); ?>
@@ -93,6 +276,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
                     </tr>
                 </table>
             </form>
+			 *
+			 */ ?>
+			 <?php echo do_shortcode('[gravityform id="12" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <a id="click-me-anchor" href="#more-info"></a>
 
                 <script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1183768",type:"1",revenue:"250",actionid:"28343"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/2007fee5-1f40-4bc4-b858-08ac4cb4c99b/analytics.html?dedup=1&domainId=1183768&type=1&revenue=250&actionid=28343" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe></noscript>

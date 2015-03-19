@@ -18,6 +18,48 @@ avala_form_submit();
 get_header();
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+    <style>
+    	.main .gform_wrapper .gform_footer input.button, .main .gform_wrapper .gform_footer input[type="submit"]
+    	{
+    			background-color: #D2A124;
+				border-width: 1px 1px 5px;
+				border-style: solid;
+				border-color: #BC8900;
+				-moz-border-top-colors: none;
+				-moz-border-right-colors: none;
+				-moz-border-bottom-colors: none;
+				-moz-border-left-colors: none;
+				border-image: none;
+				border-radius: 8px;
+				color: #FFF;
+				cursor: pointer;
+				font: 21px/50px "GSMT";
+				text-transform: uppercase;
+    		    box-sizing: border-box;
+    			width: 296px;
+    	}
+    	
+    	.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label
+    	{
+    		margin-top: 4px !important;
+    	}
+    	
+    	p.note a
+    	{
+    		color: #0092CB;
+			text-decoration: none;
+    	}
+    	
+    	
+		.gplaceholder label
+		{
+			display: none !important;
+		}
+		
+		
+		
+    </style>
+    
     <div class="hero ppc-page <?php echo $opts['color']; ?>">
         <?php
         $pagetitle = esc_attr(the_title('','',false));
@@ -49,6 +91,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     	<div class="wrap">
             <div class="oneCol">
                 <div class="main">
+                    <?php echo do_shortcode('[gravityform id="13" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
+                    <p>* Indicates required fields</p>
+                    <?php /* ?>
                     <form action="<?php echo get_permalink(); ?>" method="post" id="leadForm">
 
                         <?php avala_hidden_fields( 15, 9, 5 ); ?>
@@ -104,7 +149,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                                 </td>
                             </tr>
                         </table>
-                    </form>
+                    </form> <?php */ ?>
                 </div>
             </div>
 <?php endwhile; // end of the loop. ?>
