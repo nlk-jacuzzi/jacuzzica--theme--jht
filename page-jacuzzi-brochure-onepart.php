@@ -190,7 +190,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 			width: 100%;
 			top: 0px;
 			left: 562px;
-		}				
+		}
+		
+		.emailblock
+		{
+			margin-top: 35px !important;				
+		}					
 	</style>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
