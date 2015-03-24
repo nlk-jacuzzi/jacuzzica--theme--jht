@@ -4322,7 +4322,8 @@ html#land, html#land body {
 }
 #land a.btn,
 #land form table input.bigGoldBtn,
-#land form input.bigGoldBtn {
+#land form input.bigGoldBtn,
+#gform_submit_button_12 {
 	font-size: 20px;
 	line-height: 40px;
 	height: 40px;
