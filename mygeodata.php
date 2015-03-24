@@ -62,26 +62,6 @@ function geo_data_mysql( $ip ) {
 	return $a;
 }
 
-function geo_data_curl( $ip ) {
-	
-	$username = '66659';
-	$password = 'FJv62Mz6ezIB';
-
-	if ( $ip == '127.0.0.1' )
-		$ip = 'me';
-
-	// Use CURL to get MaxMind Geo Data
-	$ch = curl_init('https://geoip.maxmind.com/geoip/v2.0/city/' . $ip . '');
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 1);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$result = curl_exec($ch);
-	$a = json_decode($result, true);
-	return $a;
-}
-
 function getRemoteIPAddress() {
 
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) :
@@ -152,11 +132,9 @@ if ( ($_POST) ) {
 			break;
 		case 4:
 		case 5:
-			$resultAPI = geo_data_curl( $ip );
 			break;
 		case 6:
 		case 7:
-			$resultAPI = geo_data_curl( $ip );
 			$resultDB = geo_data_mysql( $ip );
 			break;
 	}

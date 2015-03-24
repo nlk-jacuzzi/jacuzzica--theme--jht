@@ -3407,9 +3407,6 @@ function geo_data( $debug = false, $return = null ) {
 		$a = $_SESSION['geoDbLookupData'];
 	else :
 		$a = geo_data_mysql_ip( $ip );
-		if ( !$a ) {
-			$a = geo_data_curl( $ip );
-		}
 	endif;
 
 	if ( !$a ) {
@@ -3473,26 +3470,9 @@ function geo_data_curl( $ip ) {
 }
 
 function geo_data_mysql_connect() {
-	//$livehost		= array( 'jacuzzi.com', 'www.jacuzzi.com', 'www.jacuzzihottubs.com', 'www.jacuzzi.ca/hot-tubs', 'beta.jacuzzihottubs.com', 'www.jacuzzi.ca', 'beta.jacuzzi.com', 'beta.jacuzzi.ca' );
-	$devhost		= array( 'jht.ninthlink.me' );
-	$localhost		= array( 'localhost', 'local.jht', 'localhost/jacuzzi.com', 'local.jacuzzi' );
-	
-	//if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-	// set up "live" credentials by default
-	$the_user = "jacuzzi_geoip";
-	$the_pass = "g9WpMRjuPf";
-	$the_name = "jacuzzi_geoip";
-	//}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
-	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
+	$the_user = GEO_USER;
+	$the_pass = GEO_PASS;
+	$the_name = GEO_NAME;
 	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
 	
 	return $mysqli;
