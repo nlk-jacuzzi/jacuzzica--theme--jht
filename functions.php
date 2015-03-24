@@ -3470,10 +3470,15 @@ function geo_data_curl( $ip ) {
 }
 
 function geo_data_mysql_connect() {
-	$the_user = GEO_USER;
-	$the_pass = GEO_PASS;
-	$the_name = GEO_NAME;
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
+	
+	$mysqli = false;
+
+	if ( in_array( $_SERVER['SERVER_NAME'], array('jacuzzi.ca', 'www.jacuzzi.ca') ) ) {
+		$the_user = GEO_USER;
+		$the_pass = GEO_PASS;
+		$the_name = GEO_NAME;
+		$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
+	}
 	
 	return $mysqli;
 }
@@ -3484,7 +3489,7 @@ function geo_data_mysql_ip( $ip ) {
 	$mysqli = geo_data_mysql_connect();
 
 	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
+	if ($mysqli->connect_errno || $mysqli == false ) {
 		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 		return false;
 	}
