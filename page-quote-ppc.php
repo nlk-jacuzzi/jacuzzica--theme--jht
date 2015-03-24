@@ -13,8 +13,6 @@ if(isset($wp_query->query_vars['keyword'])) {
 $custom = get_post_meta($post->ID,'jht_newppc_options');
 $opts = $custom[0];
 
-avala_form_submit();
-
 get_header();
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -93,63 +91,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <div class="main">
                     <?php echo do_shortcode('[gravityform id="13" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
                     <p>* Indicates required fields</p>
-                    <?php /* ?>
-                    <form action="<?php echo get_permalink(); ?>" method="post" id="leadForm">
 
-                        <?php avala_hidden_fields( 15, 9, 5 ); ?>
-                        
-                        <table cellspacing="0">
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'first_name', 'text ', true, 'field', array( 'placeholder' => 'First Name*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'last_name', 'text ', true, 'field', array( 'placeholder' => 'Last Name*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'email', 'text email', true, 'field', array( 'placeholder' => 'Email*' ) ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'postal_code', 'text ', true, 'field', array( 'maxlength' => 10, 'placeholder' => 'Postal Code*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'phone', 'text  phonenumber', true, 'field', array( 'maxlength' => 16, 'placeholder' => 'Phone*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'currently_own', ' select', false, 'field', NULL, 'select', NULL, 'Do you currently own a hot tub?' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'product_id_list', ' select', false, 'field', NULL, 'select', NULL, 'Which hot tub are you interested in?' ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'buy_time_frame', ' select', false, 'field', NULL, 'select', NULL, 'When do you plan to purchase a hot tub?' ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'product_use', ' select', false, 'field', NULL, 'select', NULL, 'What benefit are you looking for in a hot tub?' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-                                    <?php avala_field( 'newsletter', '', false, 'field' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="submit" class="submit goldButton-flat" value="<?php if ( $opts['submit'] ) { echo $opts['submit']; } else { echo 'Get My Quote'; } ?>" />
-                                </td>
-                                <td>
-                                    <p>* Indicates required fields</p>
-                                    <!--p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.</p-->
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </form> <?php */ ?>
                 </div>
             </div>
 <?php endwhile; // end of the loop. ?>

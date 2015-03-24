@@ -7,8 +7,6 @@
  * @since JHT 1.0
  */
 
-avala_form_submit();
-
 wp_enqueue_style('Lato', 'http://fonts.googleapis.com/css?family=Lato:400,900');
 
 get_header( 'newdirect' );
@@ -201,6 +199,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		jQuery(document).ready(function(){
 			jQuery('.gform_footer').append('<p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
 		});
+		
+		jQuery(document).ready(function(){
+			jQuery('.gform_button').addClass('bigGoldBtn');
+		});
 	</script>
 	
 <div id="main-wrapper">
@@ -210,79 +212,6 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
             	<h1><strong class="small">The Jacuzzi Hot Tub Brochure </strong>40 Pages of Facts &amp; Photos - <strong>Free</strong></h1>
                 <h2>Get instant access to hot tub comparison charts, stunning photos,<br />complete specifications and feature descriptions.</h2>
             </div>
-            <?php /* ?>
-            <form action="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" method="post" id="leadForm" class="pform bro">
-
-                <?php avala_hidden_fields( 15, 9, 12 ); ?>
-
-                <span class="errors"><?php
-                global $wp_query;
-                $errors = false;
-                if(isset($wp_query->query_vars['jht_formerrors']) && ( count($wp_query->query_vars['jht_formerrors']) > 0) ) {
-                	foreach( $wp_query->query_vars['jht_formerrors'] as $err ) {
-                		echo "$err<br />";
-                	}
-                }
-                ?></span>
-
-                <table width="870">
-                    <tr>
-                        <td width="490" style="vertical-align: top">
-                            <table width="580">
-                                <tr>
-                                    <td width="270">
-                                        <?php avala_field('first_name', 'text full', true, 'field', array('size'=>"14", 'placeholder'=>"First Name *", 'required'=>"required" )); ?>
-                                    </td>
-                                    <td width="270">
-                                        <?php avala_field('last_name', 'text full', true, 'field', array('size'=>"15", 'placeholder'=>"Last Name *", 'required'=>"required" )); ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <?php
-                                            $geo = geo_data();
-                                            $geoa = $geo['country'];
-                                            $geob = ( strpos($_SERVER['HTTP_HOST'], '.ca') ) ? true : false ;
-                                            $zipPostal = ( $geoa == 'CA' || $geob == true ) ? 'Postal Code *' : 'Zip *';
-                                            avala_field('postal_code', 'text full', true, 'field', array('size'=>"7", 'placeholder'=>$zipPostal, 'required'=>"required" )); ?>
-                                    </td>
-                                    <td>
-                                        <?php avala_field('email', 'text full email', true, 'field', array('size'=>"20", 'placeholder'=>"Email *", 'required'=>"required" )); ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <table rel="threeRow">
-                                            <tr>
-                                                <td width="200">
-                                                    <span class="thefield"><?php avala_field('currently_own', '', false, 'all', '', 'select', 'Have you ever owned a hot tub?'); ?></span>
-                                                </td>
-                                                <td width="200">
-                                                    <span class="thefield"><?php avala_field('buy_time_frame', '', false, 'all', '', 'select'); ?></span>
-                                                </td>
-                                                <td width="200">
-                                                    <span class="thefield"><?php avala_field('product_use', '', false, 'all', '', 'select', 'What is the primary benefit you are looking for in a hot tub?'); ?></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3">
-                                                    <?php avala_field('newsletter', '', false, 'field' ); ?>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                            </table>
-                        </td>
-                        <td width="271" style="padding: 30px 0 0 10px;">
-                            <input type="submit" value="Download Now" class="bigGoldBtn taller" onClick="_gaq.push(['_trackEvent', 'lead', 'brochure-full']);" style="max-width: 184px;" />
-                            <p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p>
-                            <a id="click-me-spot" name="more-info"></a>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-			 *
-			 */ ?>
 			 <?php echo do_shortcode('[gravityform id="12" name="Download a Free Jacuzi Hot Tub Brochure Today" title="false" description="false"]'); ?>
             <a id="click-me-anchor" href="#more-info"></a>
 
