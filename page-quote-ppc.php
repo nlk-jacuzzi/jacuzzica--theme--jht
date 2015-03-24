@@ -13,11 +13,51 @@ if(isset($wp_query->query_vars['keyword'])) {
 $custom = get_post_meta($post->ID,'jht_newppc_options');
 $opts = $custom[0];
 
-avala_form_submit();
-
 get_header();
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+    <style>
+    	.main .gform_wrapper .gform_footer input.button, .main .gform_wrapper .gform_footer input[type="submit"]
+    	{
+    			background-color: #D2A124;
+				border-width: 1px 1px 5px;
+				border-style: solid;
+				border-color: #BC8900;
+				-moz-border-top-colors: none;
+				-moz-border-right-colors: none;
+				-moz-border-bottom-colors: none;
+				-moz-border-left-colors: none;
+				border-image: none;
+				border-radius: 8px;
+				color: #FFF;
+				cursor: pointer;
+				font: 21px/50px "GSMT";
+				text-transform: uppercase;
+    		    box-sizing: border-box;
+    			width: 296px;
+    	}
+    	
+    	.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label
+    	{
+    		margin-top: 4px !important;
+    	}
+    	
+    	p.note a
+    	{
+    		color: #0092CB;
+			text-decoration: none;
+    	}
+    	
+    	
+		.gplaceholder label
+		{
+			display: none !important;
+		}
+		
+		
+		
+    </style>
+    
     <div class="hero ppc-page <?php echo $opts['color']; ?>">
         <?php
         $pagetitle = esc_attr(the_title('','',false));
@@ -49,62 +89,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
     	<div class="wrap">
             <div class="oneCol">
                 <div class="main">
-                    <form action="<?php echo get_permalink(); ?>" method="post" id="leadForm">
+                    <?php echo do_shortcode('[gravityform id="13" name="No-Obligation Price Quote" title="false" description="false"]'); ?>
+                    <p>* Indicates required fields</p>
 
-                        <?php avala_hidden_fields( 15, 9, 5 ); ?>
-                        
-                        <table cellspacing="0">
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'first_name', 'text ', true, 'field', array( 'placeholder' => 'First Name*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'last_name', 'text ', true, 'field', array( 'placeholder' => 'Last Name*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'email', 'text email', true, 'field', array( 'placeholder' => 'Email*' ) ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'postal_code', 'text ', true, 'field', array( 'maxlength' => 10, 'placeholder' => 'Postal Code*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'phone', 'text  phonenumber', true, 'field', array( 'maxlength' => 16, 'placeholder' => 'Phone*' ) ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'currently_own', ' select', false, 'field', NULL, 'select', NULL, 'Do you currently own a hot tub?' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <?php avala_field( 'product_id_list', ' select', false, 'field', NULL, 'select', NULL, 'Which hot tub are you interested in?' ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'buy_time_frame', ' select', false, 'field', NULL, 'select', NULL, 'When do you plan to purchase a hot tub?' ); ?>
-                                </td>
-                                <td>
-                                    <?php avala_field( 'product_use', ' select', false, 'field', NULL, 'select', NULL, 'What benefit are you looking for in a hot tub?' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-                                    <?php avala_field( 'newsletter', '', false, 'field' ); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="submit" class="submit goldButton-flat" value="<?php if ( $opts['submit'] ) { echo $opts['submit']; } else { echo 'Get My Quote'; } ?>" />
-                                </td>
-                                <td>
-                                    <p>* Indicates required fields</p>
-                                    <!--p class="note">Your privacy is very important to us. See our <a href="<?php echo get_permalink(3987) ?>">Privacy Policy</a>.</p-->
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
                 </div>
             </div>
 <?php endwhile; // end of the loop. ?>

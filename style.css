@@ -5105,3 +5105,81 @@ margin-top: 4px;
 		width: 296px;
 	}
 
+
+/* For Collections New Menu Style */
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li
+{
+	width: 304px;
+	border-right: 1px solid #CCC;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li:nth-child(even)
+{
+	border-right: 0px solid #CCC;
+}
+
+
+.hd .primaryMenu li ul li div.superMenu.collection-super
+{
+	height: auto;	
+}	
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li
+{
+	height: auto;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .h
+{
+	display: none;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li p.link
+{
+	display: none;	
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .thumb {
+    float: left;
+    width: 150px;
+    border: 0px solid #CCC;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .tag {
+    float: left;
+	width: 125px;
+    border: 0px solid #CCC;
+    font-family: "GSMT";
+    font-size: 19px;
+    line-height: 22px;
+    margin-top: 25px;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li .tag a
+{
+	position: inherit;
+	font-family: "GSMT";
+	font-size: 19px;
+	line-height: 22px;
+	white-space: normal;
+	height: auto;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li hr
+{
+	color: #CCC;
+	border-top: 1px solid rgb(204, 204, 204);
+	width: 90%;
+}
+
+.hd .primaryMenu li ul li div.superMenu ul.grid4.grid2 li:last-child hr
+{
+	display: none;
+}
+
+.clear
+{
+	clear: both;
+	margin: 0 auto;
+}
+
