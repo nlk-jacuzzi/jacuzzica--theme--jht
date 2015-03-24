@@ -201,6 +201,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		jQuery(document).ready(function(){
 			jQuery('.gform_footer').append('<p><small><i>* indicates required field<br><a href="<?php echo get_permalink(3987) ?>">Privacy policy.</a></i></small></p><a id="click-me-spot" name="more-info"></a>');
 		});
+		
+		jQuery(document).ready(function(){
+			jQuery('.gform_button').addClass('bigGoldBtn');
+		});
 	</script>
 	
 <div id="main-wrapper">
