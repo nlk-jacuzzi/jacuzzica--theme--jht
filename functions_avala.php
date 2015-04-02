@@ -286,8 +286,6 @@ function avala_hidden_fields( $leadSourceId = LEAD_SOURCE_ID, $leadCategoryId = 
 			echo '<div style="display: none; visibility: hidden;"><pre>';
 			echo '<!--Geo Function Return-->';
 			print_r( $geo );
-			echo '<!--Geo Function Curl Return-->';
-			print_r( geo_data_curl( $ip ) );
 			echo '<!--Geo Function MySql IP Return-->';
 			print_r( geo_data_mysql_ip( $ip ) );
 			echo '<!--Geo Function MySql ZIP Return-->';

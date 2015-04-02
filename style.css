@@ -95,7 +95,12 @@ table {
 a img {
 	border: none;
 }
-
+sup {
+	font-size: .5em;
+	position: relative;
+	top: -2px;
+	vertical-align: top;
+}
 /* - - - - - LAYOUT - - - - - */
 body{
 	font-size:12px;
@@ -458,7 +463,7 @@ body.admin-bar .hd { top: 28px }
 	font-size:11px;
 	padding-top: 13px;
 	padding-bottom: 13px;
-	white-space:nowrap;
+	/*white-space:nowrap;*/
 	box-shadow: inner 0 0 5px #CCCCCC;
 	border-top:1px solid #ccc;
 	letter-spacing: normal;
@@ -4322,7 +4327,8 @@ html#land, html#land body {
 }
 #land a.btn,
 #land form table input.bigGoldBtn,
-#land form input.bigGoldBtn {
+#land form input.bigGoldBtn,
+#gform_submit_button_12 {
 	font-size: 20px;
 	line-height: 40px;
 	height: 40px;
@@ -4355,7 +4361,8 @@ html#land, html#land body {
 }
 #land a.btn:hover,
 #land form table input.bigGoldBtn:hover,
-#land form input.bigGoldBtn:hover {
+#land form input.bigGoldBtn:hover,
+#gform_submit_button_12:hover {
 	background: #839616;
 	background: -moz-linear-gradient(top,  #C4D646 0%, #B2C72B 48%, #9FB224 50%, #839616 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C4D646), color-stop(48%,#B2C72B), color-stop(50%,#9FB224), color-stop(100%,#839616));
@@ -4367,7 +4374,8 @@ html#land, html#land body {
 }
 #land form table input.bigGoldBtn,
 #land form input.bigGoldBtn,
-#land a.btn.dl {
+#land a.btn.dl,
+#gform_submit_button_12 {
 	padding: 0;
 	width: 280px;
 	height: 44px;

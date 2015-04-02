@@ -3407,9 +3407,6 @@ function geo_data( $debug = false, $return = null ) {
 		$a = $_SESSION['geoDbLookupData'];
 	else :
 		$a = geo_data_mysql_ip( $ip );
-		if ( !$a ) {
-			$a = geo_data_curl( $ip );
-		}
 	endif;
 
 	if ( !$a ) {
@@ -3473,27 +3470,15 @@ function geo_data_curl( $ip ) {
 }
 
 function geo_data_mysql_connect() {
-	//$livehost		= array( 'jacuzzi.com', 'www.jacuzzi.com', 'www.jacuzzihottubs.com', 'www.jacuzzi.ca/hot-tubs', 'beta.jacuzzihottubs.com', 'www.jacuzzi.ca', 'beta.jacuzzi.com', 'beta.jacuzzi.ca' );
-	$devhost		= array( 'jht.ninthlink.me' );
-	$localhost		= array( 'localhost', 'local.jht', 'localhost/jacuzzi.com', 'local.jacuzzi' );
 	
-	//if ( in_array( $_SERVER['SERVER_NAME'], $livehost ) ) {
-	// set up "live" credentials by default
-	$the_user = "jacuzzi_geoip";
-	$the_pass = "g9WpMRjuPf";
-	$the_name = "jacuzzi_geoip";
-	//}
-	if ( in_array( $_SERVER['SERVER_NAME'], $devhost ) ) {
-		$the_user = "admin_geoip";
-		$the_pass = "r4e3w2q1";
-		$the_name = "admin_geoip";
+	$mysqli = false;
+
+	if ( in_array( $_SERVER['SERVER_NAME'], array('jacuzzi.ca', 'www.jacuzzi.ca') ) ) {
+		$the_user = GEO_USER;
+		$the_pass = GEO_PASS;
+		$the_name = GEO_NAME;
+		$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
 	}
-	if ( in_array( $_SERVER['SERVER_NAME'], $localhost ) ) {
-		$the_user = "root";
-		$the_pass = "";
-		$the_name = "nlk_geoip";
-	}
-	$mysqli = new mysqli(DB_HOST, $the_user, $the_pass, $the_name);
 	
 	return $mysqli;
 }
@@ -3504,7 +3489,7 @@ function geo_data_mysql_ip( $ip ) {
 	$mysqli = geo_data_mysql_connect();
 
 	// Unable to MySQL? Return false
-	if ($mysqli->connect_errno) {
+	if ($mysqli->connect_errno || $mysqli == false ) {
 		$error = "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 		return false;
 	}
@@ -3848,3 +3833,75 @@ function jht_do_hreflang() {
 }
 
 
+// For Template Dropdown on jht_cat post type
+
+# Define your custom post type string
+define('JHT_CAT_POST_TYPE', 'jht_cat');
+
+/**
+ * Register the meta box
+ */
+add_action('add_meta_boxes', 'page_templates_dropdown_metabox');
+function page_templates_dropdown_metabox(){
+    add_meta_box(
+        JHT_CAT_POST_TYPE.'-page-template',
+        __('Template', 'rainbow'),
+        'render_page_template_dropdown_metabox',
+        JHT_CAT_POST_TYPE,
+        'side', #I prefer placement under the post actions meta box
+        'low'
+    );
+}
+
+/**
+ * Render your metabox - This code is similar to what is rendered on the page post type
+ * @return void
+ */
+function render_page_template_dropdown_metabox(){
+    global $post;
+    $template = get_post_meta($post->ID, '_wp_page_template', true);
+    echo "
+        <label class='screen-reader-text' for='page_template'>Page Template</label>
+            <select name='_wp_page_template' id='page_template'>
+            <option value='default'>Default Template</option>";
+            page_template_dropdown($template);
+    echo "</select>";
+}
+
+/**
+ * Save the page template
+ * @return void
+ */
+function save_page_template($post_id){
+
+    # Skip the auto saves
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+        return;
+    elseif ( defined( 'DOING_AJAX' ) && DOING_AJAX )
+        return;
+    elseif ( defined( 'DOING_CRON' ) && DOING_CRON )
+        return;
+
+    # Only update the page template meta if we are on our specific post type
+    elseif(JHT_CAT_POST_TYPE === $_POST['post_type'])
+        update_post_meta($post_id, '_wp_page_template', esc_attr($_POST['_wp_page_template']));
+}
+add_action('save_post', 'save_page_template');
+
+
+/**
+ * Set the page template
+ * @param string $template The determined template from the WordPress brain
+ * @return string $template Full path to predefined or custom page template
+ */
+function set_page_template($template){
+    global $post;
+    if(JHT_CAT_POST_TYPE === $post->post_type){
+        $custom_template = get_post_meta($post->ID, '_wp_page_template', true);
+        if($custom_template)
+            #since our dropdown only gives the basename, use the locate_template() function to easily find the full path
+            return locate_template($custom_template);
+    }
+    return $template;
+}
+add_filter('single_template', 'set_page_template');
