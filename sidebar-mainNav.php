@@ -61,7 +61,7 @@
 									} else {
 										$cname = $c['name'];
 										if($c['name'] == 'Collections'){
-											$o .= '<ul class="grid4 collections collections-new">';	//remove grid2 class temporarily
+											$o .= '<ul class="grid4 grid2 collections collections-new">';	//remove grid2 class temporarily
 										}
 										else {
 											$o .= '<ul class="grid4 collections">';
