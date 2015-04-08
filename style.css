@@ -595,6 +595,12 @@ body.admin-bar .hd { top: 28px }
 	color:#B98100;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.hd .primaryMenu li ul li div.superMenu ul li.j-585 a{
+	background-position: -2088px 15px;
+}
+.hd .primaryMenu li ul li div.superMenu ul li.j-575 a{
+	background-position: -1990px 15px;
+}
 .hd .primaryMenu li ul li div.superMenu ul li.j-lx a{
 	background-position: 0 15px;
 }
@@ -4154,7 +4160,7 @@ body.quote .state { width: 105px; }
 	position: relative;
 }
 #land #page-header .content.ab-b {
-	background: url(images/landing/land-bg_B.png) no-repeat 0 0;
+	background: url(images/landing/hot_tub_brochure_new.jpg) no-repeat 0 0;
 }
 #land .wrap,
 #land .twoCol {
