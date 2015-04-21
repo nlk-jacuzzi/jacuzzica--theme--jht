@@ -944,7 +944,7 @@ img.eschdr { position: relative; margin: 0 0 10px -13px }
 .hero.buyersguide2 { height: 312px; background:#000 url(images/heros/free-buyers-guide-grad.jpg) repeat-x 0 0; margin-top: 69px; z-index: 99; }
 .hero.buyersguide2 .wrap { height: 312px; background: url(images/heros/free-buyers-guide.jpg) no-repeat -30px 0px; }
 .hero.buyersguide2 .wrap img { position: absolute; left: 26px; top: 13px; height: 353px; width: 255px; }
-.hero.buyersguide2 .wrap form { position: absolute; top: -46px; right: 54px; height: 304px; width: 311px; background-color: #eee; box-shadow: inset 0 0 160px #aaa; border-radius: 9px; }
+/*.hero.buyersguide2 .wrap form { position: absolute; top: -46px; right: 54px; height: 304px; width: 311px; background-color: #eee; box-shadow: inset 0 0 160px #aaa; border-radius: 9px; }*/
 .hero.buyersguide2 .wrap form span.formtitle { display: block; padding: 13px 15px 5px; font: 700 16px "GSH", sans-serif; letter-spacing: -.5px; }
 .hero.buyersguide2 .wrap form tbody { display: block; margin-top: 5px; margin-left: 14px; width: 281px; }
 .hero.buyersguide2 .wrap form tbody td { padding: 0 6px 2px 0; width: 140px; }
