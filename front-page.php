@@ -16,12 +16,12 @@ get_header(); ?>
                 </a>
             </div>
         </div>
-        <div class="slide0 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/CANHolidayHomeHero.jpg);">
-            <a href="<?php echo get_bloginfo('url'); ?>/promo/">
+        <div class="slide1 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/spring-promo-2015.jpg);">
+            <!--a href="<?php echo get_bloginfo('url'); ?>/promo/">
                 <div class="wrap"></div>
-            </a>
+            </a-->
         </div>
-        <div class="slide1 slide" style="display: none;">
+        <div class="slide2 slide" style="display: none;">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/couple-in-jacuzzi-bg.jpg"></a>
         	<div class="wrap">
             	<div class="inner">
@@ -35,7 +35,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide1 slide" style="display:none;">
+        <div class="slide3 slide" style="display:none;">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/couple-in-jacuzzi-bg.jpg"></a>
             <div class="wrap">
                 <div class="inner">
@@ -49,7 +49,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide2 slide" style="display:none">
+        <div class="slide4 slide" style="display:none">
         	<a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/woman-under-water.jpg"></a>
         	<div class="wrap">
             	<div class="inner">
@@ -65,7 +65,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide7 slide" style="display:none">
+        <div class="slide5 slide" style="display:none">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/hero-why-jacuzzi-couple.jpg"></a>
             <div class="wrap">
                 <div class="img-btn" goto="vidmodal" rel="//www.youtube.com/embed/qxYknzV-yNQ?rel=0"><img src="<?php bloginfo('template_url'); ?>/images/icons/play-video-circle.png" width="227" height="58" /></div>
