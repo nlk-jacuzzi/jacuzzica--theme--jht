@@ -12,9 +12,9 @@ get_header(); ?>
     <div class="hero">
         <!-- PROMO SLIDE -->
         <div class="slide1 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/spring-promo-2015.jpg); background-color: #d7a52a;">
-            <!--a href="<?php echo get_bloginfo('url'); ?>/promo/">
+            <a href="<?php echo get_bloginfo('url'); ?>/promo/" style="width: 100%; height: 100%; display: block;">
                 <div class="wrap"></div>
-            </a-->
+            </a>
         </div>
         <!-- END PROMO -->
         <div class="slide0 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Final-j-500-CanEng.jpg);">
