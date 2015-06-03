@@ -25,7 +25,7 @@ get_header(); ?>
                 </a>
             </div>
         </div>
-        <div class="slide2 slide" style="display: none;">
+        <div class="slide2 slide slide-discover" style="display: none;">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/couple-in-jacuzzi-bg.jpg"></a>
         	<div class="wrap">
             	<div class="inner">
@@ -39,7 +39,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide3 slide" style="display:none;">
+        <div class="slide3 slide slide-discover" style="display:none;">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/couple-in-jacuzzi-bg.jpg"></a>
             <div class="wrap">
                 <div class="inner">
@@ -53,7 +53,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide4 slide" style="display:none">
+        <div class="slide4 slide slide-difference" style="display:none">
         	<a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/woman-under-water.jpg"></a>
         	<div class="wrap">
             	<div class="inner">
@@ -69,7 +69,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide5 slide" style="display:none">
+        <div class="slide5 slide slide-whyjacuzzi" style="display:none">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/hero-why-jacuzzi-couple.jpg"></a>
             <div class="wrap">
                 <div class="img-btn" goto="vidmodal" rel="//www.youtube.com/embed/qxYknzV-yNQ?rel=0"><img src="<?php bloginfo('template_url'); ?>/images/icons/play-video-circle.png" width="227" height="58" /></div>
