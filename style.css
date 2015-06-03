@@ -1203,7 +1203,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	height: 501px;
 	background: url(images/fx.gif) repeat;
 }
-.hero .slide1 .inner{
+.hero .slide.slide-discover .inner{
 	width: 640px;
 	left: 335px;
 	height: 456px;
@@ -1211,7 +1211,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	position:relative;
 	top:110px;
 }
-.hero .slide2 .inner{
+.hero .slide.slide-difference .inner{
 	position:absolute;
 	right:0;
 	top:90px;
@@ -1236,7 +1236,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	left:52px;
 	top:154px;
 }
-.hero .slide7 .img-btn{
+.hero .slide.slide-whyjacuzzi .img-btn{
 	position:absolute;
 	left:580px;
 	top:310px;
@@ -1255,7 +1255,7 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	font-family:"GSL";
 }
 .hero .slide h1 sup { vertical-align: top }
-.hero .slide2 h1{
+.hero .slide.slide-difference h1{
 	letter-spacing:5px;
 	margin: 0 0 10px;
 }
@@ -1270,25 +1270,25 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	font-family:"GSL";
 }
 .hero .slide h3 sup { vertical-align: top }
-.hero .slide2 h3{
+.hero .slide.slide-difference h3{
 	letter-spacing:5px;
 	margin: 0 0 10px;
 }
-.hero .slide2 h2{
+.hero .slide.slide-difference h2{
 	color:#FFF;
 	font-family:"GSL";
 	text-transform:uppercase;
 	letter-spacing:0.13em;
 	margin: 0 0 40px;
 }
-.hero .slide2 h2 strong{
+.hero .slide.slide-difference h2 strong{
 	font-family:"GSMT";
 	font-weight:normal;
 }
-.hero .slide2 .video {
+.hero .slide.slide-difference .video {
 	vertical-align:middle;
 }
-.hero .slide2 .video a{
+.hero .slide.slide-difference .video a{
 	height:57px;
 	line-height:57px;
 	font-size:13px;
@@ -1296,10 +1296,10 @@ div.buyers-guide-complex ul li:before { content: "•"; font-size: 40%; vertical
 	text-decoration: none;
 	display:inline-block;
 }
-.hero .slide2 .video span{
+.hero .slide.slide-difference .video span{
 	padding: 0 0 0 35px;
 }
-.hero .slide2 .video img{
+.hero .slide.slide-difference .video img{
 	box-shadow: -2px -3px 15px #000;
 }
 		
@@ -5173,8 +5173,8 @@ margin-top: 4px;
 {
 	position: inherit;
 	font-family: "GSMT";
-	font-size: 19px;
-	line-height: 22px;
+	font-size: 17px;
+	line-height: 21px;
 	white-space: normal;
 	height: auto;
 }

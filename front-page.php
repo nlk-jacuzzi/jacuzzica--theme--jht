@@ -11,19 +11,21 @@ define('DONOTCACHEPAGE', true);
 get_header(); ?>
     <div class="hero">
         <!-- PROMO SLIDE -->
+        <?php /*
         <div class="slide1 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/spring-promo-2015.jpg); background-color: #d7a52a;">
             <a href="<?php echo get_bloginfo('url'); ?>/promo/" style="width: 100%; height: 100%; display: block;">
                 <div class="wrap"></div>
             </a>
         </div>
+        */ ?>
         <!-- END PROMO -->
-        <div class="slide0 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Final-j-500-CanEng.jpg);">
+        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Final-j-500-CanEng.jpg);">
             <div class="wrap">
                 <a href="<?php echo get_bloginfo('url'); ?>/j-500/" target="_blank"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;">
                 </a>
             </div>
         </div>
-        <div class="slide2 slide" style="display: none;">
+        <div class="slide2 slide slide-discover" style="display: none;">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/couple-in-jacuzzi-bg.jpg"></a>
         	<div class="wrap">
             	<div class="inner">
@@ -37,7 +39,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide3 slide" style="display:none;">
+        <div class="slide3 slide slide-discover" style="display:none;">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/couple-in-jacuzzi-bg.jpg"></a>
             <div class="wrap">
                 <div class="inner">
@@ -51,7 +53,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide4 slide" style="display:none">
+        <div class="slide4 slide slide-difference" style="display:none">
         	<a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/woman-under-water.jpg"></a>
         	<div class="wrap">
             	<div class="inner">
@@ -67,7 +69,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="slide5 slide" style="display:none">
+        <div class="slide5 slide slide-whyjacuzzi" style="display:none">
             <a class="slidebg" href="<?php bloginfo('template_url'); ?>/images/heros/hero-why-jacuzzi-couple.jpg"></a>
             <div class="wrap">
                 <div class="img-btn" goto="vidmodal" rel="//www.youtube.com/embed/qxYknzV-yNQ?rel=0"><img src="<?php bloginfo('template_url'); ?>/images/icons/play-video-circle.png" width="227" height="58" /></div>
