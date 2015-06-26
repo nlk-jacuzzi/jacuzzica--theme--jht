@@ -290,7 +290,7 @@ body.popup { padding: 10px }
 .popup input.sub { float: left }
 /* - - - HEADER - - - */
 .hd{
-	background:url(images/bg/hd.png) top left repeat-x;
+	background: #000 url(images/bg/hd.png) top left repeat-x;
 	height:123px;
 	position:absolute;
 	top:0;
