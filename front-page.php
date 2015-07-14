@@ -11,13 +11,15 @@ define('DONOTCACHEPAGE', true);
 get_header(); ?>
     <div class="hero">
         <!-- PROMO SLIDE -->
+        <?php /*
         <div class="slide1 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/StaycationHomeHero_CAN.jpg); background-color: #fff;">
             <a href="<?php echo get_bloginfo('url'); ?>/promo/" style="width: 100%; height: 100%; display: block;">
                 <div class="wrap"></div>
             </a>
         </div>
+        */ ?>
         <!-- END PROMO -->
-        <div class="slide0 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Final-j-500-CanEng.jpg);">
+        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Final-j-500-CanEng.jpg);">
             <div class="wrap">
                 <a href="<?php echo get_bloginfo('url'); ?>/j-500/" target="_blank"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;">
                 </a>
