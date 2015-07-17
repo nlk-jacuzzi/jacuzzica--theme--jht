@@ -19,10 +19,16 @@ get_header(); ?>
         </div>
         */ ?>
         <!-- END PROMO -->
-        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Final-j-500-CanEng.jpg);">
+        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.png);">
             <div class="wrap">
-                <a href="<?php echo get_bloginfo('url'); ?>/j-500/" target="_blank"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;">
-                </a>
+                <a href="<?php echo get_bloginfo('url'); ?>/j-500/"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;"></a>
+                <a href="<?php echo get_bloginfo('url'); ?>/owners-corner/remote-control/"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;"></a>
+            </div>
+        </div>
+        <div class="slide1 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.png);">
+            <div class="wrap">
+                <a href="<?php echo get_bloginfo('url'); ?>/j-500/"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;"></a>
+                <a href="<?php echo get_bloginfo('url'); ?>/owners-corner/remote-control/"  style="position: absolute; color: transparent; width: 190px; height: 40px; top: 307px; left: 21px;"></a>
             </div>
         </div>
         <div class="slide2 slide slide-discover" style="display: none;">
