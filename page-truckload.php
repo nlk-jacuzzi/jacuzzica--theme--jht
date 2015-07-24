@@ -25,7 +25,7 @@ if ( isset($pageopts['o']) ) if ( $pageopts['o'] != '' ) $titleoverride = $pageo
 	?>
     <div class="hero truckload all-tubs" style="<?php echo $landing_img ?>">
     	<div class="wrap">
-            <?php  $IP=$_SERVER['REMOTE_ADDR']; $ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP); ?>
+            <?php //  $IP=$_SERVER['REMOTE_ADDR']; $ipcountry = file_get_contents('http://api.hostip.info/country.php?ip='.$IP); ?>
 
         	<div class="inner">
             	
