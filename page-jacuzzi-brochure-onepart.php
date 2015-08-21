@@ -181,6 +181,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 		{
 			padding: 0px !important;
 		}
+
+		.reqd {
+			position: absolute;
+    		right: 168px;
+    		bottom: 83px;
+		}
 		
 		li.email-right
 		{
