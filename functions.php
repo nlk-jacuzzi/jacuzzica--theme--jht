@@ -301,6 +301,24 @@ function jht_comment( $comment, $args, $depth ) {
 }
 endif;
 
+
+include("Mobile_Detect.php");
+
+// [jht_mobile_dealer_link]
+function mobile_dealer_link_func( $atts ) {
+    $link = get_bloginfo('url');
+	$detect = new Mobile_Detect();
+	if ( $detect->isMobile() ) {
+		$link .= '/mobile-dealer-locator/';
+	}
+	else {
+		$link .= '/dealer-locator/';
+	}
+    return $link;
+}
+add_shortcode( 'jht_mobile_dealer_link', 'mobile_dealer_link_func' );
+
+
 /**
  * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
  *
@@ -2689,7 +2707,7 @@ function jht_template_redir_check() {
 		if ( $checkmobileredir ) {
 			// we are on a page that SHOULD redir
 			// check if mobile
-			include("Mobile_Detect.php");
+			//include("Mobile_Detect.php");
 			$detect = new Mobile_Detect();
 		
 			if ( $detect->isMobile() && ( $detect->isTablet() == false ) ) {
