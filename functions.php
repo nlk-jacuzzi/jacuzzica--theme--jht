@@ -2980,6 +2980,19 @@ function jht_404fix2() {
 	}
 	$GLOBALS['wp_query'] = $wp_query;
 	$GLOBALS['wp_the_query'] = $wp_query;
+
+	if ( is_page('mobile-dealer-locator') ) {
+		//include("Mobile_Detect.php");
+		$detect = new Mobile_Detect();
+		$redir = true;
+		if ( $detect->isMobile() ) {
+			$redir = false;
+		}
+		if ( $redir ) {
+			wp_redirect( get_bloginfo('url') .'/dealer-locator/' );
+		}
+	}
+
 }
 add_action( 'wp', 'jht_404fix2', 98 );
 
