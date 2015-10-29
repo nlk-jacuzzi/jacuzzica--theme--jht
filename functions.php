@@ -3050,6 +3050,19 @@ function jht_create_squeeze_page() {
 add_action( 'wp_footer', 'jht_create_squeeze_page');
 
 
+function jht_getregion() {
+	if ( in_array( $_SERVER['SERVER_NAME'], array( 'www.jacuzzi.ca','beta.jacuzzi.ca' ) ) ) {
+		return 'ca';
+	}
+	return 'us';
+}
+function jht_isca() {
+	$r = jht_getregion();
+	if ( $r === 'ca' )
+		return true;
+	return false;
+}
+
 
 function sms_dealer_email() {
 	if ( isset($_POST['emailTo']) ) {
