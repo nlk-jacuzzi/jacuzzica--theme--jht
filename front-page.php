@@ -11,16 +11,16 @@ define('DONOTCACHEPAGE', true);
 get_header(); ?>
     <div class="hero">
         <!-- PROMO SLIDE -->
-
+        <?PHP /*
         <div class="slide1 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/ca-home-hero-oct2015.jpg); background-color: #fff;">
             <a href="<?php echo get_bloginfo('url'); ?>/promo/" style="width: 100%; height: 100%; display: block;">
                 <div class="wrap"></div>
             </a>
         </div>
-
+        */ ?>
         <!-- END PROMO -->
 
-        <div class="slide0 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.png);">
+        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.png);">
             <div class="wrap">
                 <a href="<?php echo get_bloginfo('url'); ?>/j-500/"  style="position: absolute; color: transparent; width: 330px; height: 40px; top: 177px; left: -20px;"></a>
                 <a href="<?php echo get_bloginfo('url'); ?>/owners-corner/remote-control/"  style="position: absolute; color: transparent; width: 116px; height: 20px; top: 346px; left: 51px;"></a>

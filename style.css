@@ -5401,3 +5401,43 @@ span.white {
 .prolink-hero.hero p {
 	padding: 0 20px;
 }
+
+/* - - - - - jQuery UI fixes - - - - - */
+	body.video-showcase #accord h3 {
+		line-height: 30px;
+		padding: 3px 7px;
+	}
+	body.video-showcase .ui-widget-content {
+		border: none;
+		background: transparent;
+	}
+
+	body.video-showcase .ui-state-default {
+		border: none;
+		background: none;
+		font-weight: inherit;
+		color: inherit;
+	}
+
+	body.video-showcase .ui-corner-all,
+	body.video-showcase .ui-corner-top,
+	body.video-showcase .ui-corner-right,
+	body.video-showcase .ui-corner-tr {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	body.video-showcase .ui-state-active .ui-icon,
+	body.video-showcase .ui-state-default .ui-icon,
+	body.video-showcase .ui-icon-triangle-1-s,
+	body.video-showcase .ui-icon,
+	body.video-showcase .ui-widget-content .ui-icon {
+		background-image: url(images/icons/sprite.png);
+		background: url(images/icons/sprite.png) 0 0 no-repeat;
+		float: left;
+		height: 30px;
+		width: 30px;
+	}
+/* - - - end UI video fix - - - */
