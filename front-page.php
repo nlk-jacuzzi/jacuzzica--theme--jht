@@ -20,6 +20,7 @@ get_header(); ?>
         <?php */ ?>
         <!-- END PROMO -->
 
+
         <div class="slide0 slide" style="display: none; position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.png);">
             <div class="wrap">
                 <a href="<?php echo get_bloginfo('url'); ?>/j-500/"  style="position: absolute; color: transparent; width: 330px; height: 40px; top: 177px; left: -20px;"></a>
