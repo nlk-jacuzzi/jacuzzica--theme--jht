@@ -46,7 +46,9 @@
 												$o .= '<li class="cell ';
 												if ( isset( $c['tubs'][$i] ) ) {
 													$t = $c['tubs'][$i];
-													$o .= $t['slug'] .'"><a href="'. get_bloginfo('url') . $t['url'] .'">'. $t['name'] .'<span>'. str_replace(' in','"',$t['size']) .'</span>';
+													$t_size = explode('-', str_replace(' in','"',$t['size']));
+													$t_size = explode('–', $t_size[0]);
+													$o .= $t['slug'] .'"><a href="'. get_bloginfo('url') . $t['url'] .'">'. $t['name'] .'<span>'. $t_size[0] .'</span>';
 													if ( $t['imgs']['rollover'] != '' ) {
 														$o .= '<span class="rollover prel" title="'. $t['imgs']['rollover'] .'"><span>'. $t['name'] .'</span></span>';
 													}
