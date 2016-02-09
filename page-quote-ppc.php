@@ -34,7 +34,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				font: 21px/50px "GSMT";
 				text-transform: uppercase;
     		    box-sizing: border-box;
-    			width: 296px;
+    			/* width: 296px; */
     	}
     	
     	.gform_wrapper .gfield_checkbox li label, .gform_wrapper .gfield_radio li label
