@@ -125,12 +125,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>Jacuzzi® Brochure</h3>
 						<h4>LIFESTYLE photos, facts & more</h4>
-						<a href="http://www.jacuzzi.com/hot-tubs/request-brochure/">Get your Free Brochure</a>
+						<a href="http://www.jacuzzi.ca/hot-tubs/request-brochure/">Get your Free Brochure</a>
     				</div>
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>Get Pricing</h3>
 						<h4>On Your Perfect Hot Tub</h4>
-						<a href="http://www.jacuzzi.com/hot-tubs/get-a-quote/">Get My Pricing</a>
+						<a href="http://www.jacuzzi.ca/hot-tubs/get-a-quote/">Get My Pricing</a>
     				</div>
     				<div class="col-xs-12 col-sm-4 col-md-4">
     					<h3>HOT TUB SELECTOR</h3>
