@@ -21,7 +21,7 @@ get_header(); ?>
         <!-- END PROMO -->
 
 
-        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.png);">
+        <div class="slide0 slide" style="position: absolute; top: 0; left: 0; z-index: 2; background-image: url(<?php bloginfo('template_url'); ?>/images/heros/Prolink_CA.jpg);">
             <div class="wrap">
                 <a href="<?php echo get_bloginfo('url'); ?>/j-500/"  style="position: absolute; color: transparent; width: 330px; height: 40px; top: 177px; left: -20px;"></a>
                 <a href="<?php echo get_bloginfo('url'); ?>/owners-corner/remote-control/"  style="position: absolute; color: transparent; width: 116px; height: 20px; top: 346px; left: 51px;"></a>
