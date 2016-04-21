@@ -34,6 +34,7 @@ get_header('blank');
 <?php
 if ( have_posts() ) while ( have_posts() ) : the_post();
 	$banner_img = get_field('banner_bacgkround_desktop');
+  $small_img = get_field('banner_image_small');
 	?>
 	<script type="text/javascript">var switchTo5x=true;</script>
 	<script type="text/javascript">var switchTo5x=true;</script>
@@ -66,6 +67,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
         	<div class="row">
             	<div class="col-xs-12 col-sm-8 col-md-7">
             		<?php the_field('banner_text'); ?>
+            	</div>
+              <div class="col-xs-12 col-sm-4 col-md-5">
+            		<?php echo $small_img ?>
             	</div>
             	<span class="arrow_down"></span>
             </div>
